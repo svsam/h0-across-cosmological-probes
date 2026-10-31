@@ -1,0 +1,851 @@
+Matplotlib is building the font cache; this may take a moment.
+/Users/svs/cosmosis/cosmosis-env/lib/python3.11/site-packages/cosmosis/postprocessing/utils.py:42: RuntimeWarning: invalid value encountered in divide
+  x = (v-mu)/sigma
+/Users/svs/cosmosis/cosmosis-env/lib/python3.11/site-packages/cosmosis/plotting/kde.py:29: RuntimeWarning: invalid value encountered in divide
+  normalized_points.append((column-col_mean)/col_std)
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/des_y3_bao.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 5040
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.771651 ± 0.169954 
+    cosmological_parameters--omega_m = 0.311161 ± 0.0559549 
+    cosmological_parameters--omega_k = 0.000104056 ± 0.00578183 
+    cosmological_parameters--w = -0.726773 ± 0.173376 
+    prior = 6.35771 ± 0 
+    post = -40.9486 ± 0.621989 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.64626 + 0.257278 - 0.114346 
+    cosmological_parameters--omega_m = 0.369138 + 0.0224426 - 0.0993888 
+    cosmological_parameters--omega_k = -0.00254498 + 0.0104998 - 0.00296559 
+    cosmological_parameters--w = -0.787656 + 0.165585 - 0.18695 
+    prior = nan + nan - nan 
+    post = -40.5912 + 0.0735272 - 0.336124 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.64626 + 0.432695 - 0.149429 
+    cosmological_parameters--omega_m = 0.369138 + 0.0308586 - 0.154694 
+    cosmological_parameters--omega_k = -0.00254498 + 0.012223 - 0.00697313 
+    cosmological_parameters--w = -0.787656 + 0.387254 - 0.212322 
+    prior = nan + nan - nan 
+    post = -40.5912 + 0.0735272 - 1.59659 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.758567 ± 0.169954
+    cosmological_parameters--omega_m = 0.315573 ± 0.0559549
+    cosmological_parameters--omega_k = 2.10698e-05 ± 0.00578183
+    cosmological_parameters--w = -0.752559 ± 0.173376
+    prior = 6.35771 ± 0
+    post = -40.7137 ± 0.621989
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.519729
+    cosmological_parameters--omega_m > 0.214814
+    cosmological_parameters--omega_k > -0.00905571
+    cosmological_parameters--w > -0.972312
+    prior > 6.35771
+    post > -42.1864
+
+95% upper limits:
+    cosmological_parameters--h0 < 1.05851
+    cosmological_parameters--omega_m < 0.391965
+    cosmological_parameters--omega_k < 0.00918501
+    cosmological_parameters--w < -0.400432
+    prior < 6.35771
+    post < -40.5199
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.663558
+    cosmological_parameters--omega_m > 0.279692
+    cosmological_parameters--omega_k > -0.00341123
+    cosmological_parameters--w > -0.828625
+    prior > 6.35771
+    post > -40.9329
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.862501
+    cosmological_parameters--omega_m < 0.348948
+    cosmological_parameters--omega_k < 0.003693
+    cosmological_parameters--w < -0.650123
+    prior < 6.35771
+    post < -40.5925
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.620523
+    cosmological_parameters--omega_m = 0.331796
+    cosmological_parameters--omega_k = -0.00968417
+    cosmological_parameters--w = -0.558465
+    prior = 6.35771
+    post = -40.5177
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.620523
+    cosmological_parameters--omega_m = 0.331796
+    cosmological_parameters--omega_k = -0.00968417
+    cosmological_parameters--w = -0.558465
+    prior = 6.35771
+    post = -40.5177
+
+
+#You should cite these papers in any publication based on this pipeline.
+     http://arxiv.org/abs/astro-ph/9911177
+     http://arxiv.org/abs/1201.3654
+
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/pantheonplussh0es.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 5040
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.733598 ± 0.0100432 
+    cosmological_parameters--omega_m = 0.280387 ± 0.0374819 
+    cosmological_parameters--omega_k = 0.000347484 ± 0.00580724 
+    cosmological_parameters--w = -0.876859 ± 0.0727219 
+    supernova_params--m = -19.244 ± 0.0290205 
+    prior = 5.2591 ± 0 
+    post = -722.21 ± 1.21898 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.732907 + 0.010817 - 0.00911722 
+    cosmological_parameters--omega_m = 0.298431 + 0.0283675 - 0.0517706 
+    cosmological_parameters--omega_k = 0.00502854 + 0.00372697 - 0.00641199 
+    cosmological_parameters--w = -0.882121 + 0.0609354 - 0.0995278 
+    supernova_params--m = -19.2406 + 0.0261278 - 0.031442 
+    prior = nan + nan - nan 
+    post = -721.343 + 0.543077 - 1.28011 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.732907 + 0.0202433 - 0.0188525 
+    cosmological_parameters--omega_m = 0.298431 + 0.045388 - 0.0918397 
+    cosmological_parameters--omega_k = 0.00502854 + 0.00460861 - 0.014427 
+    cosmological_parameters--w = -0.882121 + 0.129318 - 0.117808 
+    supernova_params--m = -19.2406 + 0.0518128 - 0.0615554 
+    prior = nan + nan - nan 
+    post = -721.343 + 0.737033 - 3.25846 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.733521 ± 0.0100432
+    cosmological_parameters--omega_m = 0.283375 ± 0.0374819
+    cosmological_parameters--omega_k = 0.000666511 ± 0.00580724
+    cosmological_parameters--w = -0.880666 ± 0.0727219
+    supernova_params--m = -19.2435 ± 0.0290205
+    prior = 5.2591 ± 0
+    post = -721.913 ± 1.21898
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.717029
+    cosmological_parameters--omega_m > 0.215011
+    cosmological_parameters--omega_k > -0.0089471
+    cosmological_parameters--w > -0.985437
+    supernova_params--m > -19.2924
+    prior > 5.2591
+    post > -724.587
+
+95% upper limits:
+    cosmological_parameters--h0 < 0.750324
+    cosmological_parameters--omega_m < 0.337515
+    cosmological_parameters--omega_k < 0.00911735
+    cosmological_parameters--w < -0.752787
+    supernova_params--m < -19.1967
+    prior < 5.2591
+    post < -720.852
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.728899
+    cosmological_parameters--omega_m > 0.261896
+    cosmological_parameters--omega_k > -0.00315311
+    cosmological_parameters--w > -0.920547
+    supernova_params--m > -19.2575
+    prior > 5.2591
+    post > -722.502
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.738268
+    cosmological_parameters--omega_m < 0.301916
+    cosmological_parameters--omega_k < 0.00410784
+    cosmological_parameters--w < -0.840702
+    supernova_params--m < -19.2306
+    prior < 5.2591
+    post < -721.463
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.733849
+    cosmological_parameters--omega_m = 0.303269
+    cosmological_parameters--omega_k = 0.0047839
+    cosmological_parameters--w = -0.932315
+    supernova_params--m = -19.2463
+    prior = 5.2591
+    post = -720.606
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.733849
+    cosmological_parameters--omega_m = 0.303269
+    cosmological_parameters--omega_k = 0.0047839
+    cosmological_parameters--w = -0.932315
+    supernova_params--m = -19.2463
+    prior = 5.2591
+    post = -720.606
+
+NOT saving more than one covariance matrix - just using first ini file
+NOT saving more than one proposal matrix - just using first ini file
+
+#You should cite these papers in any publication based on this pipeline.
+     Adam G. Riess et al 2022 ApJL 934 L7
+     ApJ 938 110 (2022)
+
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/desi_dr2_bao.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 1008
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.646603 ± 0.0299983 
+    cosmological_parameters--omega_m = 0.29686 ± 0.00898334 
+    cosmological_parameters--omega_k = 0.000532427 ± 0.00573142 
+    cosmological_parameters--w = -0.910934 ± 0.0565023 
+    prior = 6.35771 ± 0 
+    post = 0.39534 ± 1.12874 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.66546 + 0.0179301 - 0.0417149 
+    cosmological_parameters--omega_m = 0.299667 + 0.00651115 - 0.0111232 
+    cosmological_parameters--omega_k = 0.00639079 + 0.00236353 - 0.0103755 
+    cosmological_parameters--w = -0.93921 + 0.0641911 - 0.0461936 
+    prior = nan + nan - nan 
+    post = 1.12785 + 0.534655 - 0.962378 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.66546 + 0.0340306 - 0.0790387 
+    cosmological_parameters--omega_m = 0.299667 + 0.0141075 - 0.0202117 
+    cosmological_parameters--omega_k = 0.00639079 + 0.00328491 - 0.0157035 
+    cosmological_parameters--w = -0.93921 + 0.133182 - 0.0605916 
+    prior = nan + nan - nan 
+    post = 1.12785 + 0.552476 - 2.79803 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.649534 ± 0.0299983
+    cosmological_parameters--omega_m = 0.297269 ± 0.00898334
+    cosmological_parameters--omega_k = 0.00100215 ± 0.00573142
+    cosmological_parameters--w = -0.919103 ± 0.0565023
+    prior = 6.35771 ± 0
+    post = 0.747316 ± 1.12874
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.591392
+    cosmological_parameters--omega_m > 0.281523
+    cosmological_parameters--omega_k > -0.00887005
+    cosmological_parameters--w > -0.989425
+    prior > 6.35771
+    post > -1.65589
+
+95% upper limits:
+    cosmological_parameters--h0 < 0.688577
+    cosmological_parameters--omega_m < 0.311544
+    cosmological_parameters--omega_k < 0.00877862
+    cosmological_parameters--w < -0.806397
+    prior < 6.35771
+    post < 1.5335
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.633191
+    cosmological_parameters--omega_m > 0.292587
+    cosmological_parameters--omega_k > -0.00287454
+    cosmological_parameters--w > -0.943897
+    prior > 6.35771
+    post > 0.190455
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.664543
+    cosmological_parameters--omega_m < 0.301433
+    cosmological_parameters--omega_k < 0.00440644
+    cosmological_parameters--w < -0.890079
+    prior < 6.35771
+    post < 1.08213
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.650144
+    cosmological_parameters--omega_m = 0.298817
+    cosmological_parameters--omega_k = -0.00966233
+    cosmological_parameters--w = -0.904767
+    prior = 6.35771
+    post = 1.68033
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.650144
+    cosmological_parameters--omega_m = 0.298817
+    cosmological_parameters--omega_k = -0.00966233
+    cosmological_parameters--w = -0.904767
+    prior = 6.35771
+    post = 1.68033
+
+NOT saving more than one covariance matrix - just using first ini file
+NOT saving more than one proposal matrix - just using first ini file
+
+#You should cite these papers in any publication based on this pipeline.
+     http://arxiv.org/abs/astro-ph/9911177
+     http://arxiv.org/abs/1201.3654
+     https://arxiv.org/abs/2503.14738
+
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/planck_compressed.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 5040
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.636977 ± 0.0283674 
+    cosmological_parameters--omega_m = 0.352191 ± 0.030924 
+    cosmological_parameters--omega_k = 0.000316935 ± 0.00563201 
+    cosmological_parameters--w = -0.851218 ± 0.0899284 
+    cosmological_parameters--omega_b = 0.0555204 ± 0.0047829 
+    prior = 9.57659 ± 1.77636e-15 
+    post = 8.08475 ± 1.19259 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.619817 + 0.0346399 - 0.0197942 
+    cosmological_parameters--omega_m = 0.366218 + 0.0295403 - 0.0331574 
+    cosmological_parameters--omega_k = 0.00254489 + 0.00564791 - 0.00753055 
+    cosmological_parameters--w = -0.886201 + 0.0979355 - 0.0918687 
+    cosmological_parameters--omega_b = 0.0578343 + 0.00372191 - 0.00606722 
+    prior = nan + nan - nan 
+    post = 8.9159 + 0.546061 - 1.18313 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.619817 + 0.0720633 - 0.0290727 
+    cosmological_parameters--omega_m = 0.366218 + 0.0337603 - 0.0690278 
+    cosmological_parameters--omega_k = 0.00254489 + 0.00712999 - 0.0117765 
+    cosmological_parameters--w = -0.886201 + 0.192404 - 0.113536 
+    cosmological_parameters--omega_b = 0.0578343 + 0.00606722 - 0.0115736 
+    prior = nan + nan - nan 
+    post = 8.9159 + 0.655273 - 3.11255 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.632372 ± 0.0283674
+    cosmological_parameters--omega_m = 0.355859 ± 0.030924
+    cosmological_parameters--omega_k = 0.000446872 ± 0.00563201
+    cosmological_parameters--w = -0.858695 ± 0.0899284
+    cosmological_parameters--omega_b = 0.055974 ± 0.0047829
+    prior = 9.57659 ± 1.77636e-15
+    post = 8.39343 ± 1.19259
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.598755
+    cosmological_parameters--omega_m > 0.296984
+    cosmological_parameters--omega_k > -0.00878909
+    cosmological_parameters--w > -0.982808
+    cosmological_parameters--omega_b > 0.0470869
+    prior > 9.57659
+    post > 5.8201
+
+95% upper limits:
+    cosmological_parameters--h0 < 0.689734
+    cosmological_parameters--omega_m < 0.395415
+    cosmological_parameters--omega_k < 0.00904998
+    cosmological_parameters--w < -0.69348
+    cosmological_parameters--omega_b < 0.0624972
+    prior < 9.57659
+    post < 9.38771
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.619428
+    cosmological_parameters--omega_m > 0.338375
+    cosmological_parameters--omega_k > -0.00298759
+    cosmological_parameters--w > -0.907093
+    cosmological_parameters--omega_b > 0.0532779
+    prior > 9.57659
+    post > 7.81604
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.648475
+    cosmological_parameters--omega_m < 0.371237
+    cosmological_parameters--omega_k < 0.00378936
+    cosmological_parameters--w < -0.80885
+    cosmological_parameters--omega_b < 0.0583391
+    prior < 9.57659
+    post < 8.8069
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.609237
+    cosmological_parameters--omega_m = 0.383229
+    cosmological_parameters--omega_k = 0.00936486
+    cosmological_parameters--w = -0.672198
+    cosmological_parameters--omega_b = 0.0602815
+    prior = 9.57659
+    post = 9.57118
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.609237
+    cosmological_parameters--omega_m = 0.383229
+    cosmological_parameters--omega_k = 0.00936486
+    cosmological_parameters--w = -0.672198
+    cosmological_parameters--omega_b = 0.0602815
+    prior = 9.57659
+    post = 9.57118
+
+NOT saving more than one covariance matrix - just using first ini file
+NOT saving more than one proposal matrix - just using first ini file
+
+#You should cite these papers in any publication based on this pipeline.
+     http://arxiv.org/abs/astro-ph/9911177
+     http://arxiv.org/abs/1201.3654
+
+Finalizing:
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/means.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/medians.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/l95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/u95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/l68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/u68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/lerr68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/uerr68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/lerr95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/uerr95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/peak1d.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/maxpost.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/maxlike.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/covmat.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/proposal.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/citations.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_corner.png
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_h0_histograms.png
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_h0_histograms_50_80.png
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_parameter_histograms.png
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_h0.png
+/Users/svs/cosmosis/cosmosis-env/lib/python3.11/site-packages/cosmosis/postprocessing/utils.py:42: RuntimeWarning: invalid value encountered in divide
+  x = (v-mu)/sigma
+/Users/svs/cosmosis/cosmosis-env/lib/python3.11/site-packages/cosmosis/plotting/kde.py:29: RuntimeWarning: invalid value encountered in divide
+  normalized_points.append((column-col_mean)/col_std)
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/des_y3_bao.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 5040
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.771651 ± 0.169954 
+    cosmological_parameters--omega_m = 0.311161 ± 0.0559549 
+    cosmological_parameters--omega_k = 0.000104056 ± 0.00578183 
+    cosmological_parameters--w = -0.726773 ± 0.173376 
+    prior = 6.35771 ± 0 
+    post = -40.9486 ± 0.621989 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.64626 + 0.257278 - 0.114346 
+    cosmological_parameters--omega_m = 0.369138 + 0.0224426 - 0.0993888 
+    cosmological_parameters--omega_k = -0.00254498 + 0.0104998 - 0.00296559 
+    cosmological_parameters--w = -0.787656 + 0.165585 - 0.18695 
+    prior = nan + nan - nan 
+    post = -40.5912 + 0.0735272 - 0.336124 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.64626 + 0.432695 - 0.149429 
+    cosmological_parameters--omega_m = 0.369138 + 0.0308586 - 0.154694 
+    cosmological_parameters--omega_k = -0.00254498 + 0.012223 - 0.00697313 
+    cosmological_parameters--w = -0.787656 + 0.387254 - 0.212322 
+    prior = nan + nan - nan 
+    post = -40.5912 + 0.0735272 - 1.59659 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.758567 ± 0.169954
+    cosmological_parameters--omega_m = 0.315573 ± 0.0559549
+    cosmological_parameters--omega_k = 2.10698e-05 ± 0.00578183
+    cosmological_parameters--w = -0.752559 ± 0.173376
+    prior = 6.35771 ± 0
+    post = -40.7137 ± 0.621989
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.519729
+    cosmological_parameters--omega_m > 0.214814
+    cosmological_parameters--omega_k > -0.00905571
+    cosmological_parameters--w > -0.972312
+    prior > 6.35771
+    post > -42.1864
+
+95% upper limits:
+    cosmological_parameters--h0 < 1.05851
+    cosmological_parameters--omega_m < 0.391965
+    cosmological_parameters--omega_k < 0.00918501
+    cosmological_parameters--w < -0.400432
+    prior < 6.35771
+    post < -40.5199
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.663558
+    cosmological_parameters--omega_m > 0.279692
+    cosmological_parameters--omega_k > -0.00341123
+    cosmological_parameters--w > -0.828625
+    prior > 6.35771
+    post > -40.9329
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.862501
+    cosmological_parameters--omega_m < 0.348948
+    cosmological_parameters--omega_k < 0.003693
+    cosmological_parameters--w < -0.650123
+    prior < 6.35771
+    post < -40.5925
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.620523
+    cosmological_parameters--omega_m = 0.331796
+    cosmological_parameters--omega_k = -0.00968417
+    cosmological_parameters--w = -0.558465
+    prior = 6.35771
+    post = -40.5177
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.620523
+    cosmological_parameters--omega_m = 0.331796
+    cosmological_parameters--omega_k = -0.00968417
+    cosmological_parameters--w = -0.558465
+    prior = 6.35771
+    post = -40.5177
+
+
+#You should cite these papers in any publication based on this pipeline.
+     http://arxiv.org/abs/1201.3654
+     http://arxiv.org/abs/astro-ph/9911177
+
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/pantheonplussh0es.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 5040
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.733598 ± 0.0100432 
+    cosmological_parameters--omega_m = 0.280387 ± 0.0374819 
+    cosmological_parameters--omega_k = 0.000347484 ± 0.00580724 
+    cosmological_parameters--w = -0.876859 ± 0.0727219 
+    supernova_params--m = -19.244 ± 0.0290205 
+    prior = 5.2591 ± 0 
+    post = -722.21 ± 1.21898 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.732907 + 0.010817 - 0.00911722 
+    cosmological_parameters--omega_m = 0.298431 + 0.0283675 - 0.0517706 
+    cosmological_parameters--omega_k = 0.00502854 + 0.00372697 - 0.00641199 
+    cosmological_parameters--w = -0.882121 + 0.0609354 - 0.0995278 
+    supernova_params--m = -19.2406 + 0.0261278 - 0.031442 
+    prior = nan + nan - nan 
+    post = -721.343 + 0.543077 - 1.28011 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.732907 + 0.0202433 - 0.0188525 
+    cosmological_parameters--omega_m = 0.298431 + 0.045388 - 0.0918397 
+    cosmological_parameters--omega_k = 0.00502854 + 0.00460861 - 0.014427 
+    cosmological_parameters--w = -0.882121 + 0.129318 - 0.117808 
+    supernova_params--m = -19.2406 + 0.0518128 - 0.0615554 
+    prior = nan + nan - nan 
+    post = -721.343 + 0.737033 - 3.25846 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.733521 ± 0.0100432
+    cosmological_parameters--omega_m = 0.283375 ± 0.0374819
+    cosmological_parameters--omega_k = 0.000666511 ± 0.00580724
+    cosmological_parameters--w = -0.880666 ± 0.0727219
+    supernova_params--m = -19.2435 ± 0.0290205
+    prior = 5.2591 ± 0
+    post = -721.913 ± 1.21898
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.717029
+    cosmological_parameters--omega_m > 0.215011
+    cosmological_parameters--omega_k > -0.0089471
+    cosmological_parameters--w > -0.985437
+    supernova_params--m > -19.2924
+    prior > 5.2591
+    post > -724.587
+
+95% upper limits:
+    cosmological_parameters--h0 < 0.750324
+    cosmological_parameters--omega_m < 0.337515
+    cosmological_parameters--omega_k < 0.00911735
+    cosmological_parameters--w < -0.752787
+    supernova_params--m < -19.1967
+    prior < 5.2591
+    post < -720.852
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.728899
+    cosmological_parameters--omega_m > 0.261896
+    cosmological_parameters--omega_k > -0.00315311
+    cosmological_parameters--w > -0.920547
+    supernova_params--m > -19.2575
+    prior > 5.2591
+    post > -722.502
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.738268
+    cosmological_parameters--omega_m < 0.301916
+    cosmological_parameters--omega_k < 0.00410784
+    cosmological_parameters--w < -0.840702
+    supernova_params--m < -19.2306
+    prior < 5.2591
+    post < -721.463
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.733849
+    cosmological_parameters--omega_m = 0.303269
+    cosmological_parameters--omega_k = 0.0047839
+    cosmological_parameters--w = -0.932315
+    supernova_params--m = -19.2463
+    prior = 5.2591
+    post = -720.606
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.733849
+    cosmological_parameters--omega_m = 0.303269
+    cosmological_parameters--omega_k = 0.0047839
+    cosmological_parameters--w = -0.932315
+    supernova_params--m = -19.2463
+    prior = 5.2591
+    post = -720.606
+
+NOT saving more than one covariance matrix - just using first ini file
+NOT saving more than one proposal matrix - just using first ini file
+
+#You should cite these papers in any publication based on this pipeline.
+     Adam G. Riess et al 2022 ApJL 934 L7
+     ApJ 938 110 (2022)
+
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/desi_dr2_bao.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 1008
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.646603 ± 0.0299983 
+    cosmological_parameters--omega_m = 0.29686 ± 0.00898334 
+    cosmological_parameters--omega_k = 0.000532427 ± 0.00573142 
+    cosmological_parameters--w = -0.910934 ± 0.0565023 
+    prior = 6.35771 ± 0 
+    post = 0.39534 ± 1.12874 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.66546 + 0.0179301 - 0.0417149 
+    cosmological_parameters--omega_m = 0.299667 + 0.00651115 - 0.0111232 
+    cosmological_parameters--omega_k = 0.00639079 + 0.00236353 - 0.0103755 
+    cosmological_parameters--w = -0.93921 + 0.0641911 - 0.0461936 
+    prior = nan + nan - nan 
+    post = 1.12785 + 0.534655 - 0.962378 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.66546 + 0.0340306 - 0.0790387 
+    cosmological_parameters--omega_m = 0.299667 + 0.0141075 - 0.0202117 
+    cosmological_parameters--omega_k = 0.00639079 + 0.00328491 - 0.0157035 
+    cosmological_parameters--w = -0.93921 + 0.133182 - 0.0605916 
+    prior = nan + nan - nan 
+    post = 1.12785 + 0.552476 - 2.79803 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.649534 ± 0.0299983
+    cosmological_parameters--omega_m = 0.297269 ± 0.00898334
+    cosmological_parameters--omega_k = 0.00100215 ± 0.00573142
+    cosmological_parameters--w = -0.919103 ± 0.0565023
+    prior = 6.35771 ± 0
+    post = 0.747316 ± 1.12874
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.591392
+    cosmological_parameters--omega_m > 0.281523
+    cosmological_parameters--omega_k > -0.00887005
+    cosmological_parameters--w > -0.989425
+    prior > 6.35771
+    post > -1.65589
+
+95% upper limits:
+    cosmological_parameters--h0 < 0.688577
+    cosmological_parameters--omega_m < 0.311544
+    cosmological_parameters--omega_k < 0.00877862
+    cosmological_parameters--w < -0.806397
+    prior < 6.35771
+    post < 1.5335
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.633191
+    cosmological_parameters--omega_m > 0.292587
+    cosmological_parameters--omega_k > -0.00287454
+    cosmological_parameters--w > -0.943897
+    prior > 6.35771
+    post > 0.190455
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.664543
+    cosmological_parameters--omega_m < 0.301433
+    cosmological_parameters--omega_k < 0.00440644
+    cosmological_parameters--w < -0.890079
+    prior < 6.35771
+    post < 1.08213
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.650144
+    cosmological_parameters--omega_m = 0.298817
+    cosmological_parameters--omega_k = -0.00966233
+    cosmological_parameters--w = -0.904767
+    prior = 6.35771
+    post = 1.68033
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.650144
+    cosmological_parameters--omega_m = 0.298817
+    cosmological_parameters--omega_k = -0.00966233
+    cosmological_parameters--w = -0.904767
+    prior = 6.35771
+    post = 1.68033
+
+NOT saving more than one covariance matrix - just using first ini file
+NOT saving more than one proposal matrix - just using first ini file
+
+#You should cite these papers in any publication based on this pipeline.
+     https://arxiv.org/abs/2503.14738
+     http://arxiv.org/abs/1201.3654
+     http://arxiv.org/abs/astro-ph/9911177
+
+LOADING CHAIN FROM FILE:  /Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/planck_compressed.txt
+Adding post-processor step: ContinuousCorner
+Samples after cutting: 5040
+
+Marginalized mean, std-dev:
+    cosmological_parameters--h0 = 0.636977 ± 0.0283674 
+    cosmological_parameters--omega_m = 0.352191 ± 0.030924 
+    cosmological_parameters--omega_k = 0.000316935 ± 0.00563201 
+    cosmological_parameters--w = -0.851218 ± 0.0899284 
+    cosmological_parameters--omega_b = 0.0555204 ± 0.0047829 
+    prior = 9.57659 ± 1.77636e-15 
+    post = 8.08475 ± 1.19259 
+
+
+Marginalized 1D peak, 68% asymmetric error bars:
+    cosmological_parameters--h0 = 0.619817 + 0.0346399 - 0.0197942 
+    cosmological_parameters--omega_m = 0.366218 + 0.0295403 - 0.0331574 
+    cosmological_parameters--omega_k = 0.00254489 + 0.00564791 - 0.00753055 
+    cosmological_parameters--w = -0.886201 + 0.0979355 - 0.0918687 
+    cosmological_parameters--omega_b = 0.0578343 + 0.00372191 - 0.00606722 
+    prior = nan + nan - nan 
+    post = 8.9159 + 0.546061 - 1.18313 
+
+
+Marginalized 1D peak, 95% asymmetric error bars:
+    cosmological_parameters--h0 = 0.619817 + 0.0720633 - 0.0290727 
+    cosmological_parameters--omega_m = 0.366218 + 0.0337603 - 0.0690278 
+    cosmological_parameters--omega_k = 0.00254489 + 0.00712999 - 0.0117765 
+    cosmological_parameters--w = -0.886201 + 0.192404 - 0.113536 
+    cosmological_parameters--omega_b = 0.0578343 + 0.00606722 - 0.0115736 
+    prior = nan + nan - nan 
+    post = 8.9159 + 0.655273 - 3.11255 
+
+Marginalized median, std-dev:
+    cosmological_parameters--h0 = 0.632372 ± 0.0283674
+    cosmological_parameters--omega_m = 0.355859 ± 0.030924
+    cosmological_parameters--omega_k = 0.000446872 ± 0.00563201
+    cosmological_parameters--w = -0.858695 ± 0.0899284
+    cosmological_parameters--omega_b = 0.055974 ± 0.0047829
+    prior = 9.57659 ± 1.77636e-15
+    post = 8.39343 ± 1.19259
+
+95% lower limits:
+    cosmological_parameters--h0 > 0.598755
+    cosmological_parameters--omega_m > 0.296984
+    cosmological_parameters--omega_k > -0.00878909
+    cosmological_parameters--w > -0.982808
+    cosmological_parameters--omega_b > 0.0470869
+    prior > 9.57659
+    post > 5.8201
+
+95% upper limits:
+    cosmological_parameters--h0 < 0.689734
+    cosmological_parameters--omega_m < 0.395415
+    cosmological_parameters--omega_k < 0.00904998
+    cosmological_parameters--w < -0.69348
+    cosmological_parameters--omega_b < 0.0624972
+    prior < 9.57659
+    post < 9.38771
+
+68% lower limits:
+    cosmological_parameters--h0 > 0.619428
+    cosmological_parameters--omega_m > 0.338375
+    cosmological_parameters--omega_k > -0.00298759
+    cosmological_parameters--w > -0.907093
+    cosmological_parameters--omega_b > 0.0532779
+    prior > 9.57659
+    post > 7.81604
+
+68% upper limits:
+    cosmological_parameters--h0 < 0.648475
+    cosmological_parameters--omega_m < 0.371237
+    cosmological_parameters--omega_k < 0.00378936
+    cosmological_parameters--w < -0.80885
+    cosmological_parameters--omega_b < 0.0583391
+    prior < 9.57659
+    post < 8.8069
+
+
+Maximum posterior:
+    cosmological_parameters--h0 = 0.609237
+    cosmological_parameters--omega_m = 0.383229
+    cosmological_parameters--omega_k = 0.00936486
+    cosmological_parameters--w = -0.672198
+    cosmological_parameters--omega_b = 0.0602815
+    prior = 9.57659
+    post = 9.57118
+
+
+Maximum likelihood:
+    cosmological_parameters--h0 = 0.609237
+    cosmological_parameters--omega_m = 0.383229
+    cosmological_parameters--omega_k = 0.00936486
+    cosmological_parameters--w = -0.672198
+    cosmological_parameters--omega_b = 0.0602815
+    prior = 9.57659
+    post = 9.57118
+
+NOT saving more than one covariance matrix - just using first ini file
+NOT saving more than one proposal matrix - just using first ini file
+
+#You should cite these papers in any publication based on this pipeline.
+     http://arxiv.org/abs/1201.3654
+     http://arxiv.org/abs/astro-ph/9911177
+
+Finalizing:
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/means.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/medians.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/l95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/u95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/l68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/u68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/lerr68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/uerr68.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/lerr95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/uerr95.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/peak1d.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/maxpost.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/maxlike.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/covmat.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/proposal.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/citations.txt
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_corner.svg
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_h0_histograms.svg
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_h0_histograms_50_80.svg
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_parameter_histograms.svg
+Output:  /var/folders/40/__wd33dx5lgczkmmwbsd2mtc0000gn/T//cosmosis_continuous_figures.tE7mFX/postprocess/continuous_h0.svg

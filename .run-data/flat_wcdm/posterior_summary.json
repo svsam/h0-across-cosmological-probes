@@ -1,0 +1,22 @@
+{
+  "Pantheon+SH0ES": {
+    "mean_and_gaussian_peak": 73.4479896243389,
+    "gaussian_sigma": 1.0116427928982812,
+    "median": 73.43710857842214,
+    "q16": 72.44559835675364,
+    "q84": 74.45319574603091,
+    "n_post_burn": 157472,
+    "skewness": 0.059347988514073476,
+    "kde_gaussian_l1_on_99_6pct_interval": 0.020285934986921612
+  },
+  "DES-Y3 BAO": {
+    "mean_and_gaussian_peak": 72.56211186727056,
+    "gaussian_sigma": 12.137107084424848,
+    "median": 72.23157399372054,
+    "q16": 58.7589142840946,
+    "q84": 86.67782450945303,
+    "n_post_burn": 168000,
+    "skewness": 0.04225918086442315,
+    "kde_gaussian_l1_on_99_6pct_interval": 0.23399717457962912
+  }
+}

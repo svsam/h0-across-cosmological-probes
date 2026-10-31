@@ -1,0 +1,34 @@
+{
+  "dataset": "Pantheon+SH0ES \u03a9k=+0.00",
+  "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/pantheonplussh0es_ok_+0.00.txt",
+  "converged": true,
+  "walkers": 32,
+  "history": [
+    {
+      "converged": true,
+      "emcee_version": "3.1.6",
+      "tau": [
+        43.059419876130384,
+        64.06987104002162,
+        43.30989758064521
+      ],
+      "steps_per_tau": [
+        232.23722076997635,
+        156.0796024351827,
+        230.894104087397
+      ],
+      "split_rhat": [
+        1.005818553667943,
+        1.007026300198608,
+        1.0056789921289853
+      ],
+      "effective_sample_size": [
+        5202.11374524747,
+        3496.1830945480924,
+        5172.027931557694
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+      "steps_per_walker": 10000
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "dataset": "Planck 2018 compressed",
+  "checks": [
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        10.121654500137037,
+        9.647952121269672,
+        10.523633882590955,
+        9.755620789362304,
+        10.261377759315419
+      ],
+      "steps_per_tau": [
+        9.879807693361407,
+        10.364893890750361,
+        9.502421037796466,
+        10.250500932656353,
+        9.74528005356967
+      ],
+      "effective_sample_size": [
+        165.98076924847163,
+        174.13021736460604,
+        159.64067343498064,
+        172.2084156686267,
+        163.72070489997049
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 100,
+      "steps_per_walker": 100
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        27.28737525420023,
+        26.22263203645754,
+        27.368412937806365,
+        29.26280458473181,
+        27.689162836400886
+      ],
+      "steps_per_tau": [
+        10.994095152256254,
+        11.440499168157778,
+        10.961541711670973,
+        10.251922338179721,
+        10.834563752343291
+      ],
+      "effective_sample_size": [
+        184.70079855790505,
+        192.20038602505068,
+        184.15390075607235,
+        172.2322952814193,
+        182.0206710393673
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 300,
+      "steps_per_walker": 300
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        164.0979451022747,
+        153.8990875813534,
+        127.85414114651357,
+        130.58330530108063,
+        160.23486565914115
+      ],
+      "steps_per_tau": [
+        18.281764577431105,
+        19.49329295675099,
+        23.464238022311463,
+        22.973840285961682,
+        18.722517023116154
+      ],
+      "effective_sample_size": [
+        307.13364490084257,
+        327.48732167341666,
+        394.19919877483255,
+        385.96051680415627,
+        314.5382859883514
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 3000,
+      "steps_per_walker": 3000
+    }
+  ],
+  "best_target_steps": 3000,
+  "converged": false
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "DES-Y3 BAO broad-w sensitivity",
+  "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/sensitivity/des_y3_bao_phantom_w.txt",
+  "converged": true,
+  "walkers": 32,
+  "history": [
+    {
+      "converged": true,
+      "emcee_version": "3.1.6",
+      "tau": [
+        36.353763979946,
+        31.57626311232557
+      ],
+      "steps_per_tau": [
+        82.5224040529862,
+        95.0080758235439
+      ],
+      "split_rhat": [
+        1.0078619216925715,
+        1.0093500309250316
+      ],
+      "effective_sample_size": [
+        1848.501850786891,
+        2128.1808984473832
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+      "steps_per_walker": 3000
+    }
+  ]
+}

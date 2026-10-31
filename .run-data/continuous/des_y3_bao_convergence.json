@@ -1,0 +1,82 @@
+{
+  "dataset": "DES-Y3 BAO",
+  "checks": [
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        18.290259117401217,
+        17.52020426541359,
+        14.585015937160739,
+        15.796966575807456
+      ],
+      "steps_per_tau": [
+        10.93478220927562,
+        11.415392022273247,
+        13.712703562457262,
+        12.660658553667735
+      ],
+      "effective_sample_size": [
+        367.4086822316608,
+        383.5571719483811,
+        460.746839698564,
+        425.39812740323595
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 200,
+      "steps_per_walker": 200
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        51.91914673752617,
+        44.891902388345315,
+        46.52206543998085,
+        49.41999115511611
+      ],
+      "steps_per_tau": [
+        15.408573720295276,
+        17.820585839278074,
+        17.19614106626667,
+        16.187781124626557
+      ],
+      "effective_sample_size": [
+        517.7280770019213,
+        598.7716841997433,
+        577.7903398265601,
+        543.9094457874523
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 800,
+      "steps_per_walker": 800
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        68.89917898941316,
+        62.02974022322836,
+        61.145857023762574,
+        66.52327531685891
+      ],
+      "steps_per_tau": [
+        21.770941570007466,
+        24.18194876525201,
+        24.53150667946429,
+        22.54849889539123
+      ],
+      "effective_sample_size": [
+        731.5036367522509,
+        812.5134785124676,
+        824.2586244300002,
+        757.6295628851453
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 1500,
+      "steps_per_walker": 1500
+    }
+  ],
+  "best_target_steps": 1500,
+  "converged": false
+}

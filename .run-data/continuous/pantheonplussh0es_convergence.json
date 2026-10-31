@@ -1,0 +1,91 @@
+{
+  "dataset": "Pantheon+SH0ES",
+  "checks": [
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        24.190968079368382,
+        17.467655804145007,
+        18.177395902860056,
+        17.78251737376226,
+        24.136204342464694
+      ],
+      "steps_per_tau": [
+        8.267548423189103,
+        11.449733280898561,
+        11.002676129672222,
+        11.247001523816639,
+        8.286307041580871
+      ],
+      "effective_sample_size": [
+        277.7896270191539,
+        384.71103823819163,
+        369.6899179569867,
+        377.89925120023906,
+        278.41991659711726
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 200,
+      "steps_per_walker": 200
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        46.76197181926901,
+        48.31976164900911,
+        50.32877783515763,
+        41.87696194128293,
+        44.78837805018154
+      ],
+      "steps_per_tau": [
+        17.107918440478326,
+        16.556373059352737,
+        15.895478380584729,
+        19.103582564602142,
+        17.861776532824397
+      ],
+      "effective_sample_size": [
+        574.8260596000717,
+        556.2941347942519,
+        534.0880735876469,
+        641.880374170632,
+        600.1556915028998
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 800,
+      "steps_per_walker": 800
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        53.95957332366202,
+        59.30855965769106,
+        61.719156831800575,
+        58.52616341224525,
+        52.99797526020018
+      ],
+      "steps_per_tau": [
+        27.798588973316235,
+        25.29145891684931,
+        24.30363726594415,
+        25.62956313118176,
+        28.302968040487634
+      ],
+      "effective_sample_size": [
+        934.0325895034256,
+        849.7930196061369,
+        816.6022121357234,
+        861.1533212077072,
+        950.9797261603845
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 1500,
+      "steps_per_walker": 1500
+    }
+  ],
+  "best_target_steps": 1500,
+  "converged": false
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "DES-Y3 BAO",
+  "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/flat_wcdm/des_y3_bao_wcdm.txt",
+  "converged": true,
+  "walkers": 32,
+  "history": [
+    {
+      "converged": true,
+      "emcee_version": "3.1.6",
+      "tau": [
+        43.16502852408168,
+        39.034057846928256
+      ],
+      "steps_per_tau": [
+        173.75176749427527,
+        192.13990073517823
+      ],
+      "split_rhat": [
+        1.007462304581012,
+        1.0093820794396382
+      ],
+      "effective_sample_size": [
+        3892.0395918717663,
+        4303.933776467992
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+      "steps_per_walker": 7500
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "dataset": "DESI DR2 BAO",
+  "checks": [
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        8.75373737978547,
+        8.644724639856062,
+        10.032052704218335,
+        8.7279506906282
+      ],
+      "steps_per_tau": [
+        11.423692037063457,
+        11.567748443826089,
+        9.968049705116822,
+        11.457443281316525
+      ],
+      "effective_sample_size": [
+        191.91802622266607,
+        194.33817385627827,
+        167.46323504596262,
+        192.48504712611762
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 100,
+      "steps_per_walker": 100
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        21.08352816760891,
+        18.708079469561294,
+        20.425065747201906,
+        31.816514652172486
+      ],
+      "steps_per_tau": [
+        14.229117518428279,
+        16.03585234326755,
+        14.687835217426311,
+        9.429065479977565
+      ],
+      "effective_sample_size": [
+        239.04917430959506,
+        269.4023193668948,
+        246.75563165276202,
+        158.4083000636231
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 300,
+      "steps_per_walker": 300
+    },
+    {
+      "converged": false,
+      "emcee_version": "3.1.6",
+      "tau": [
+        32.326835702402526,
+        26.28975253909812,
+        34.81907144192604,
+        48.355689334718285
+      ],
+      "steps_per_tau": [
+        18.560430891644867,
+        22.82258074159047,
+        17.231935693653597,
+        12.408053907510189
+      ],
+      "effective_sample_size": [
+        311.81523897963376,
+        383.41935645871996,
+        289.49651965338046,
+        208.45530564617118
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time and ESS >= 1000 per parameter",
+      "target_steps": 600,
+      "steps_per_walker": 600
+    }
+  ],
+  "best_target_steps": 600,
+  "converged": false
+}

@@ -1,0 +1,170 @@
+{
+  "runs": [
+    {
+      "dataset": "Pantheon+SH0ES broad-w sensitivity",
+      "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/sensitivity/pantheonplussh0es_phantom_w.txt",
+      "converged": true,
+      "walkers": 32,
+      "history": [
+        {
+          "converged": true,
+          "emcee_version": "3.1.6",
+          "tau": [
+            41.049031537117365,
+            46.359656629867345,
+            37.1975134239378
+          ],
+          "steps_per_tau": [
+            73.08333199742701,
+            64.71143701412234,
+            80.65055225087715
+          ],
+          "split_rhat": [
+            1.0069804896542704,
+            1.0059512105258164,
+            1.0075888549461967
+          ],
+          "effective_sample_size": [
+            1637.066636742365,
+            1449.5361891163404,
+            1806.5723704196485
+          ],
+          "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+          "steps_per_walker": 3000
+        }
+      ]
+    },
+    {
+      "dataset": "DES-Y3 BAO broad-w sensitivity",
+      "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/sensitivity/des_y3_bao_phantom_w.txt",
+      "converged": true,
+      "walkers": 32,
+      "history": [
+        {
+          "converged": true,
+          "emcee_version": "3.1.6",
+          "tau": [
+            36.353763979946,
+            31.57626311232557
+          ],
+          "steps_per_tau": [
+            82.5224040529862,
+            95.0080758235439
+          ],
+          "split_rhat": [
+            1.0078619216925715,
+            1.0093500309250316
+          ],
+          "effective_sample_size": [
+            1848.501850786891,
+            2128.1808984473832
+          ],
+          "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+          "steps_per_walker": 3000
+        }
+      ]
+    },
+    {
+      "dataset": "DES-Y3 BAO r_d scale 0.99",
+      "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/sensitivity/des_y3_bao_rdscale_0.99.txt",
+      "converged": true,
+      "walkers": 32,
+      "history": [
+        {
+          "converged": true,
+          "emcee_version": "3.1.6",
+          "tau": [
+            40.023917614763945,
+            37.57203631495409
+          ],
+          "steps_per_tau": [
+            74.95518127124481,
+            79.84661717166409
+          ],
+          "split_rhat": [
+            1.0082941292694183,
+            1.0056760208612772
+          ],
+          "effective_sample_size": [
+            1678.996060475884,
+            1788.5642246452755
+          ],
+          "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+          "steps_per_walker": 3000
+        }
+      ]
+    },
+    {
+      "dataset": "DES-Y3 BAO r_d scale 1.01",
+      "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/sensitivity/des_y3_bao_rdscale_1.01.txt",
+      "converged": true,
+      "walkers": 32,
+      "history": [
+        {
+          "converged": true,
+          "emcee_version": "3.1.6",
+          "tau": [
+            38.785927739908644,
+            40.51651801733662
+          ],
+          "steps_per_tau": [
+            103.13018749540478,
+            98.72516681439504
+          ],
+          "split_rhat": [
+            1.0098341586151323,
+            1.0080473666955967
+          ],
+          "effective_sample_size": [
+            2310.1161998970674,
+            2211.4437366424486
+          ],
+          "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+          "steps_per_walker": 4000
+        }
+      ]
+    }
+  ],
+  "summaries": {
+    "Pantheon+SH0ES broad-w": {
+      "mean_and_gaussian_peak": 73.47812805680262,
+      "gaussian_sigma": 1.0210955715632508,
+      "median": 73.47406960600978,
+      "q16": 72.45220646050382,
+      "q84": 74.49570878275863,
+      "n_post_burn": 67200,
+      "skewness": 0.029419510614653418,
+      "kde_gaussian_l1_on_99_6pct_interval": 0.02251592355051464
+    },
+    "DES-Y3 BAO broad-w": {
+      "mean_and_gaussian_peak": 74.61140662661843,
+      "gaussian_sigma": 12.52322883212916,
+      "median": 75.43563925477709,
+      "q16": 59.65836667442388,
+      "q84": 88.93405338704166,
+      "n_post_burn": 67200,
+      "skewness": -0.17467631977734463,
+      "kde_gaussian_l1_on_99_6pct_interval": 0.27851548628762124
+    },
+    "DES-Y3 BAO r_d \u00d7 0.99": {
+      "mean_and_gaussian_peak": 72.96928568137353,
+      "gaussian_sigma": 11.91924249468821,
+      "median": 72.80089245020295,
+      "q16": 59.45584220886031,
+      "q84": 86.81054199825635,
+      "n_post_burn": 67200,
+      "skewness": 0.02436489355491482,
+      "kde_gaussian_l1_on_99_6pct_interval": 0.22745405214073572
+    },
+    "DES-Y3 BAO r_d \u00d7 1.01": {
+      "mean_and_gaussian_peak": 71.27968602121872,
+      "gaussian_sigma": 12.139429683190242,
+      "median": 70.66828581238317,
+      "q16": 57.53736308443445,
+      "q84": 85.47381062796649,
+      "n_post_burn": 89600,
+      "skewness": 0.14211328967343873,
+      "kde_gaussian_l1_on_99_6pct_interval": 0.23864645836364168
+    }
+  }
+}

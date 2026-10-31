@@ -1,0 +1,14 @@
+#You should cite these papers in any publication based on this pipeline.
+#/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/des_y3_bao.txt
+http://arxiv.org/abs/astro-ph/9911177
+http://arxiv.org/abs/1201.3654
+#/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/pantheonplussh0es.txt
+Adam G. Riess et al 2022 ApJL 934 L7
+ApJ 938 110 (2022)
+#/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/desi_dr2_bao.txt
+http://arxiv.org/abs/astro-ph/9911177
+http://arxiv.org/abs/1201.3654
+https://arxiv.org/abs/2503.14738
+#/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/continuous/planck_compressed.txt
+http://arxiv.org/abs/astro-ph/9911177
+http://arxiv.org/abs/1201.3654

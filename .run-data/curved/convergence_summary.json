@@ -1,0 +1,194 @@
+[
+  {
+    "dataset": "Pantheon+SH0ES \u03a9k=+0.00",
+    "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/pantheonplussh0es_ok_+0.00.txt",
+    "converged": true,
+    "walkers": 32,
+    "history": [
+      {
+        "converged": true,
+        "emcee_version": "3.1.6",
+        "tau": [
+          43.059419876130384,
+          64.06987104002162,
+          43.30989758064521
+        ],
+        "steps_per_tau": [
+          232.23722076997635,
+          156.0796024351827,
+          230.894104087397
+        ],
+        "split_rhat": [
+          1.005818553667943,
+          1.007026300198608,
+          1.0056789921289853
+        ],
+        "effective_sample_size": [
+          5202.11374524747,
+          3496.1830945480924,
+          5172.027931557694
+        ],
+        "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+        "steps_per_walker": 10000
+      }
+    ]
+  },
+  {
+    "dataset": "Pantheon+SH0ES \u03a9k=-0.01",
+    "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/pantheonplussh0es_ok_-0.01.txt",
+    "converged": true,
+    "walkers": 32,
+    "history": [
+      {
+        "converged": true,
+        "emcee_version": "3.1.6",
+        "tau": [
+          45.140614318495366,
+          75.3883620935936,
+          45.66703533485283
+        ],
+        "steps_per_tau": [
+          265.83599229138684,
+          159.1757622363803,
+          262.7716012657749
+        ],
+        "split_rhat": [
+          1.003532795028011,
+          1.007994705437847,
+          1.0035604343539912
+        ],
+        "effective_sample_size": [
+          5954.726227327065,
+          3565.537074094919,
+          5886.0838683533575
+        ],
+        "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+        "steps_per_walker": 12000
+      }
+    ]
+  },
+  {
+    "dataset": "Pantheon+SH0ES \u03a9k=+0.01",
+    "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/pantheonplussh0es_ok_+0.01.txt",
+    "converged": true,
+    "walkers": 32,
+    "history": [
+      {
+        "converged": true,
+        "emcee_version": "3.1.6",
+        "tau": [
+          45.84945305250842,
+          59.438447725666926,
+          45.740504917039246
+        ],
+        "steps_per_tau": [
+          218.10510996821804,
+          168.24127114076305,
+          218.62460893549957
+        ],
+        "split_rhat": [
+          1.0075774156500623,
+          1.0066751234935645,
+          1.0074496478118453
+        ],
+        "effective_sample_size": [
+          4885.554463288084,
+          3768.6044735530922,
+          4897.19124015519
+        ],
+        "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+        "steps_per_walker": 10000
+      }
+    ]
+  },
+  {
+    "dataset": "DES-Y3 BAO \u03a9k=-0.01",
+    "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/des_y3_bao_ok_-0.01.txt",
+    "converged": true,
+    "walkers": 32,
+    "history": [
+      {
+        "converged": true,
+        "emcee_version": "3.1.6",
+        "tau": [
+          42.89648628341467,
+          44.68857857765226
+        ],
+        "steps_per_tau": [
+          233.11932669567767,
+          223.77082284288122
+        ],
+        "split_rhat": [
+          1.0031832182059004,
+          1.0069947175544935
+        ],
+        "effective_sample_size": [
+          5221.87291798318,
+          5012.466431680539
+        ],
+        "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+        "steps_per_walker": 10000
+      }
+    ]
+  },
+  {
+    "dataset": "DES-Y3 BAO \u03a9k=+0.00",
+    "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/des_y3_bao_ok_+0.00.txt",
+    "converged": true,
+    "walkers": 32,
+    "history": [
+      {
+        "converged": true,
+        "emcee_version": "3.1.6",
+        "tau": [
+          41.787858933577596,
+          44.148589812042125
+        ],
+        "steps_per_tau": [
+          179.4779677973298,
+          169.880850825144
+        ],
+        "split_rhat": [
+          1.0094615568040262,
+          1.0071060223458472
+        ],
+        "effective_sample_size": [
+          4020.3064786601876,
+          3805.331058483225
+        ],
+        "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+        "steps_per_walker": 7500
+      }
+    ]
+  },
+  {
+    "dataset": "DES-Y3 BAO \u03a9k=+0.01",
+    "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/des_y3_bao_ok_+0.01.txt",
+    "converged": true,
+    "walkers": 32,
+    "history": [
+      {
+        "converged": true,
+        "emcee_version": "3.1.6",
+        "tau": [
+          45.86428337045608,
+          46.27346091906736
+        ],
+        "steps_per_tau": [
+          218.03458519623567,
+          216.10659331252697
+        ],
+        "split_rhat": [
+          1.0049206202939927,
+          1.008385973274683
+        ],
+        "effective_sample_size": [
+          4883.974708395679,
+          4840.787690200604
+        ],
+        "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+        "steps_per_walker": 10000
+      }
+    ]
+  }
+]

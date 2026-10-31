@@ -1,0 +1,44 @@
+{
+  "Pantheon+SH0ES|-0.01": {
+    "dataset": "Pantheon+SH0ES",
+    "omega_k": -0.01,
+    "w_posterior_mean": -1.3055424631359043,
+    "gaussian_peak_H0": 75.09845113646655,
+    "gaussian_sigma_H0": 1.0332527300558902
+  },
+  "DES-Y3 BAO|-0.01": {
+    "dataset": "DES-Y3 BAO",
+    "omega_k": -0.01,
+    "w_posterior_mean": -1.3543454405214024,
+    "gaussian_peak_H0": 88.64341203305122,
+    "gaussian_sigma_H0": 5.0249212976034645
+  },
+  "Pantheon+SH0ES|+0.00": {
+    "dataset": "Pantheon+SH0ES",
+    "omega_k": 0.0,
+    "w_posterior_mean": -1.3058706468106855,
+    "gaussian_peak_H0": 75.04725874259958,
+    "gaussian_sigma_H0": 1.0443489766139482
+  },
+  "DES-Y3 BAO|+0.00": {
+    "dataset": "DES-Y3 BAO",
+    "omega_k": 0.0,
+    "w_posterior_mean": -1.3571592757232498,
+    "gaussian_peak_H0": 88.65252349564994,
+    "gaussian_sigma_H0": 5.0314929470697045
+  },
+  "Pantheon+SH0ES|+0.01": {
+    "dataset": "Pantheon+SH0ES",
+    "omega_k": 0.01,
+    "w_posterior_mean": -1.3062234525834127,
+    "gaussian_peak_H0": 74.98005435122516,
+    "gaussian_sigma_H0": 1.043299772773079
+  },
+  "DES-Y3 BAO|+0.01": {
+    "dataset": "DES-Y3 BAO",
+    "omega_k": 0.01,
+    "w_posterior_mean": -1.357934347439219,
+    "gaussian_peak_H0": 88.36831220992494,
+    "gaussian_sigma_H0": 5.130723800684225
+  }
+}

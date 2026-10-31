@@ -1,0 +1,30 @@
+{
+  "dataset": "DES-Y3 BAO r_d scale 0.99",
+  "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/sensitivity/des_y3_bao_rdscale_0.99.txt",
+  "converged": true,
+  "walkers": 32,
+  "history": [
+    {
+      "converged": true,
+      "emcee_version": "3.1.6",
+      "tau": [
+        40.023917614763945,
+        37.57203631495409
+      ],
+      "steps_per_tau": [
+        74.95518127124481,
+        79.84661717166409
+      ],
+      "split_rhat": [
+        1.0082941292694183,
+        1.0056760208612772
+      ],
+      "effective_sample_size": [
+        1678.996060475884,
+        1788.5642246452755
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+      "steps_per_walker": 3000
+    }
+  ]
+}

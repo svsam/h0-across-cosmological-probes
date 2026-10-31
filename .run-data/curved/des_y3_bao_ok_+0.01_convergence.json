@@ -1,0 +1,30 @@
+{
+  "dataset": "DES-Y3 BAO \u03a9k=+0.01",
+  "chain": "/Users/svs/cosmosis/cosmosis-standard-library/Hubble_Tension_Evolution-1/output/curved/des_y3_bao_ok_+0.01.txt",
+  "converged": true,
+  "walkers": 32,
+  "history": [
+    {
+      "converged": true,
+      "emcee_version": "3.1.6",
+      "tau": [
+        45.86428337045608,
+        46.27346091906736
+      ],
+      "steps_per_tau": [
+        218.03458519623567,
+        216.10659331252697
+      ],
+      "split_rhat": [
+        1.0049206202939927,
+        1.008385973274683
+      ],
+      "effective_sample_size": [
+        4883.974708395679,
+        4840.787690200604
+      ],
+      "criterion": "at least 50 steps per integrated autocorrelation time, ESS >= 1000 per parameter, and split-Rhat < 1.01",
+      "steps_per_walker": 10000
+    }
+  ]
+}
