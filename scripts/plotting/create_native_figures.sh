@@ -2,7 +2,7 @@
 # Render the fixed-curvature corner plot from the saved chains.
 set -eu
 
-project_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)
 postprocess="${COSMOSIS_POSTPROCESS:-cosmosis-postprocess}"
 output_dir="$project_dir/output/curved/native_postprocess"
 scratch=$(mktemp -d "${TMPDIR:-/tmp}/cosmosis_native_figures.XXXXXX")
@@ -19,7 +19,7 @@ destination="$output_dir/corner"
 mkdir -p "$destination"
 for format in png; do
     if ! "$postprocess" --burn 0.3 --thin 10 --no-plots --file-type "$format" \
-        --extra "$project_dir/scripts/corner_postprocess.py" \
+        --extra "$project_dir/scripts/plotting/corner_postprocess.py" \
         --outdir "$scratch/postprocess" \
         "$chains/pantheonplussh0es_ok_-0.01.txt" \
         "$chains/pantheonplussh0es_ok_+0.00.txt" \

@@ -68,13 +68,13 @@ Colours represent fixed Ωₖ choices. The w = −1 reference lies outside these
 With NumPy, Matplotlib and GetDist installed, regenerate all five continuous corner figures from the saved chains:
 
 ```sh
-python scripts/getdist_corner.py
+python scripts/plotting/getdist_corner.py
 ```
 
 To regenerate the earlier fixed-curvature comparison in a CosmoSIS environment:
 
 ```sh
-sh scripts/create_native_figures.sh
+sh scripts/plotting/create_native_figures.sh
 ```
 
 Both commands reuse the saved chains, discard 30% burn-in and thin by ten. They do not rerun sampling or change the convergence status.
@@ -89,3 +89,28 @@ Both commands reuse the saved chains, discard 30% burn-in and thin by ten. They 
 ## Final thoughts
 
 The clearest finding so far is methodological: one DES-Y3 BAO distance does not isolate \(H_0\) when \(\Omega_m\), \(\Omega_k\), and \(w\) are free, while several DESI BAO redshifts localize it more strongly under the chosen sound-horizon model. Pantheon+SH0ES and the compressed Planck pipeline appear to favor different regions of \(H_0\), but the present chains are not converged and the Planck likelihood is approximate. The project therefore illustrates how the ruler calibration, dataset coverage, and model freedom affect \(H_0\) inference; it does not yet establish a resolution of the Hubble tension.
+
+## Repository layout
+
+| Folder | Purpose |
+|---|---|
+| `scripts/plotting/` | Generate figures and customize CosmoSIS plot presentation. |
+| `scripts/analysis/` | Run fits, validate cosmology, audit convergence, and summarize chains. |
+| `scripts/modules/` | CosmoSIS likelihood and cosmological background modules loaded by pipeline configurations. |
+| `scripts/runtime/` | Local CosmoSIS multiprocessing launcher. |
+| `configs/` | Pipeline configurations and parameter values/priors. |
+| `.run-data/` | Saved chains and analysis diagnostics. |
+| `output/` | Generated figures. |
+
+### Which files make the plots?
+
+| File in `scripts/plotting/` | Role |
+|---|---|
+| `getdist_corner.py` | Creates the continuous corner overlay and individual corner plots for all four probes; reference values are defined here. |
+| `create_continuous_figures.sh` | Shell entry point for the GetDist corner generator. |
+| `corner_postprocess.py` | CosmoSIS extension drawing the earlier fixed-curvature H₀–w comparison. |
+| `create_native_figures.sh` | Runs that fixed-curvature extension on the six saved chains. |
+| `continuous_postprocess.py` | Alternative CosmoSIS extension for the continuous corner comparison, H₀ summaries, and parameter histograms. |
+| `native_plot_tweaks.py` | Styling hook for native CosmoSIS posterior plots: labels, H₀ units, and Gaussian summaries. |
+
+The analysis scripts are `hubble_analysis.py` (baseline fits and shared chain utilities), `curved_analysis.py` (fixed-curvature runs), `continuous_analysis.py` (continuous curved-wCDM runs), and `expanded_analysis.py` (DESI and compressed Planck chain audits). The modules are `des_y3_bao_supported.py` (DES-Y3 likelihood), `planck_compressed.py` (approximate Planck likelihood), and `curved_astropy_background.py` (background distances and density closure). `runtime/run_cosmosis_fork.py` launches CosmoSIS with the local multiprocessing adjustments.

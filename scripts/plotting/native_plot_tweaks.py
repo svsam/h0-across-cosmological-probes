@@ -14,7 +14,7 @@ import numpy as np
 from cosmosis.postprocessing.plots import Tweaks
 
 
-SUMMARY = Path(__file__).resolve().parent.parent / ".run-data/curved/curved_summary.csv"
+SUMMARY = Path(__file__).resolve().parents[2] / ".run-data/curved/curved_summary.csv"
 GROUPS = {
     "omega_k_minus_0p01": ("Ωₖ = −0.01", -0.01, ("Pantheon+SH0ES", "DES-Y3 BAO")),
     "omega_k_zero": ("Ωₖ = 0.00", 0.0, ("Pantheon+SH0ES", "DES-Y3 BAO")),

@@ -18,7 +18,7 @@ import numpy as np
 from scipy.stats import gaussian_kde, norm, skew
 
 
-HERE = Path(__file__).resolve().parent.parent
+HERE = Path(__file__).resolve().parents[2]
 ROOT = HERE.parent
 CONFIGS = HERE / "configs"
 _ENV_COSMOSIS = Path(sys.executable).with_name("cosmosis")

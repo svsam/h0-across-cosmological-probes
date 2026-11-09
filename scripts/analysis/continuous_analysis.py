@@ -13,11 +13,16 @@ from itertools import product
 
 import numpy as np
 
+import sys
+
+# Make the sibling pipeline modules available to direct script invocations.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 import hubble_analysis as base
-from curved_astropy_background import build_cosmology
+from modules.curved_astropy_background import build_cosmology
 
 
-HERE = Path(__file__).resolve().parent.parent
+HERE = Path(__file__).resolve().parents[2]
 OUT = HERE / ".run-data" / "continuous"
 TARGETS = (200, 800, 1500)
 PARAMETERS = ("cosmological_parameters--h0", "cosmological_parameters--omega_m",

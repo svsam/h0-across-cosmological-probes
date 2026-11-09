@@ -13,7 +13,7 @@ from cosmosis.postprocessing.elements import PostProcessorElement
 from cosmosis.postprocessing.outputs import PostprocessPlot
 
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 SUMMARY = ROOT / ".run-data/continuous/summary.json"
 PARAMETERS = (
     ("cosmological_parameters--h0", r"$H_0$ [km s$^{-1}$ Mpc$^{-1}$]", (45, 110), 100),

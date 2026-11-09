@@ -7,7 +7,7 @@ from cosmosis.datablock import option_section
 
 
 DATA = (
-    Path(__file__).resolve().parents[2]
+    Path(__file__).resolve().parents[3]
     / "likelihood/des-y3-bao/chi2profile_dvdesy3_cosmoplanck18_covcosmolike.csv"
 )
 
