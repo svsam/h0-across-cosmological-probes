@@ -58,7 +58,7 @@ def audit_fit(label, setting, *, extend):
             break
         if target <= steps:
             continue
-        command = [sys.executable, str(study.HERE / "scripts" / "run_cosmosis_fork.py"),
+        command = [sys.executable, str(study.HERE / "scripts" / "runtime" / "run_cosmosis_fork.py"),
                    str(ini), "--smp", "4", "-p", f"emcee.samples={target}"]
         log_dir = OUT / "logs"
         log_dir.mkdir(exist_ok=True)

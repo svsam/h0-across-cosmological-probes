@@ -12,10 +12,15 @@ from pathlib import Path
 
 import numpy as np
 
+import sys
+
+# Make the sibling pipeline modules available to direct script invocations.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 import hubble_analysis as base
 
 
-HERE = Path(__file__).resolve().parent.parent
+HERE = Path(__file__).resolve().parents[2]
 CONFIGS = HERE / "configs"
 SCRIPTS = HERE / "scripts"
 OUT = HERE / ".run-data" / "curved"
@@ -55,7 +60,7 @@ def make_run_files(label: str, omega_k: float, temp: Path):
     if label == "Pantheon+SH0ES":
         cfg["pipeline"]["modules"] = "consistency curved_astropy_background pantheon_plus"
         cfg["curved_astropy_background"] = {
-            "file": str(SCRIPTS / "curved_astropy_background.py"),
+            "file": str(SCRIPTS / "modules" / "curved_astropy_background.py"),
             "zmax": "3.0", "nz": "500", "tcmb": "2.7255", "neff": "3.046",
         }
     cfg_path = temp / f"{base.slug(label)}_ok_{omega_k:+.2f}.ini"
@@ -65,7 +70,7 @@ def make_run_files(label: str, omega_k: float, temp: Path):
 
 def validation_grid():
     """Check closure, positive H(z)^2, and acceleration across prior corners."""
-    from curved_astropy_background import build_cosmology
+    from modules.curved_astropy_background import build_cosmology
 
     rows = []
     z = np.linspace(0.0, 3.0, 301)

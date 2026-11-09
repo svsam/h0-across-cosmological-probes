@@ -14,7 +14,7 @@ import numpy as np
 from getdist import MCSamples, plots
 
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 CHAINS = ROOT / ".run-data" / "continuous"
 FIGURES = ROOT / "output" / "continuous" / "figures"
 BURN_FRACTION = 0.30
