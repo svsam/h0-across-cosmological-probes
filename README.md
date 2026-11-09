@@ -37,26 +37,6 @@ The overlay compares their four shared parameters; colours distinguish probes.
 
 ![Continuous corner overlay for all four pipelines](output/continuous/figures/continuous_corner.png)
 
-### DES-Y3 BAO
-
-![DES-Y3 BAO continuous corner plot](output/continuous/figures/continuous_corner_des_y3_bao.png)
-
-### Pantheon+SH0ES
-
-Includes the sampled supernova magnitude nuisance parameter M.
-
-![Pantheon+SH0ES continuous corner plot](output/continuous/figures/continuous_corner_pantheonplussh0es.png)
-
-### DESI DR2 BAO
-
-![DESI DR2 BAO continuous corner plot](output/continuous/figures/continuous_corner_desi_dr2_bao.png)
-
-### Planck 2018 compressed
-
-Includes the sampled baryon density Ω_b. This pipeline uses compressed information rather than the full Planck likelihood.
-
-![Compressed Planck continuous corner plot](output/continuous/figures/continuous_corner_planck_compressed.png)
-
 ### Earlier fixed-curvature pipelines
 
 Colours represent fixed Ωₖ choices. The w = −1 reference lies outside these historical runs' phantom-w prior [−1.5, −1.3]; the displayed axis is extended to show it.
