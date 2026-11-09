@@ -285,11 +285,14 @@ class ContinuousCorner(PostProcessorElement):
                     ax.set_visible(False)
                     continue
                 ax.set_xlim(*PARAMETERS[column][2])
+                reference = (67.4, 0.315, 0.0, -1.0)
+                ax.axvline(reference[column], color="#222", ls="--", lw=1.1, zorder=10)
                 if row == column:
                     ax.set_ylim(0, 1.14)
                     ax.set_yticks([0, 0.5, 1.0] if column == 0 else [])
                 else:
                     ax.set_ylim(*PARAMETERS[row][2])
+                    ax.axhline(reference[row], color="#222", ls="--", lw=1.1, zorder=10)
                 ax.tick_params(direction="in", top=True, right=True, labelsize=8)
                 ax.grid(alpha=0.10)
                 if row < 3:
@@ -316,7 +319,8 @@ class ContinuousCorner(PostProcessorElement):
         handles = [Patch(facecolor=color, edgecolor=color, alpha=0.65, label=label)
                    for label, color in zip(DATASETS, COLORS)]
         handles += [Line2D([0], [0], color="#555", lw=1.8, label="Sampled posterior"),
-                    Line2D([0], [0], color="#555", lw=1.8, ls="--", label="$H_0$ Gaussian summary")]
+                    Line2D([0], [0], color="#555", lw=1.8, ls="--", label="$H_0$ Gaussian summary"),
+                    Line2D([0], [0], color="#222", lw=1.1, ls="--", label="ΛCDM reference values")]
         fig.legend(handles=handles, loc="upper left", bbox_to_anchor=(0.10, 0.856),
                    ncol=4, frameon=False, fontsize=9)
         fig.text(0.10, 0.045,

@@ -20,6 +20,10 @@ FIGURES = ROOT / "output" / "continuous" / "figures"
 BURN_FRACTION = 0.30
 THIN = 10
 COMMON = ("h0", "omega_m", "omega_k", "w")
+# Planck 2018 base-Lambda-CDM benchmarks; M is the configured nuisance
+# fiducial, not a universal constant. Values use the plotted units.
+REFERENCE_VALUES = {"h0": 67.4, "omega_m": 0.315, "omega_k": 0.0,
+                    "w": -1.0, "omega_b": 0.0493, "m": -19.35}
 PARAMETERS = {
     "cosmological_parameters--h0": ("h0", r"H_0\,[\mathrm{km}\,\mathrm{s}^{-1}\,\mathrm{Mpc}^{-1}]", 100),
     "cosmological_parameters--omega_m": ("omega_m", r"\Omega_m", 1),
@@ -72,6 +76,24 @@ def render(samples, params, colors, labels, destination, width):
     plotter.triangle_plot(samples, params=list(params), filled=True,
                          contour_colors=list(colors), legend_labels=list(labels),
                          legend_loc="upper right")
+    for row, y_name in enumerate(params):
+        for column, x_name in enumerate(params[:row + 1]):
+            ax = plotter.subplots[row, column]
+            # Include references outside the posterior's automatic axis limits.
+            x_limits = ax.get_xlim()
+            x_ref = REFERENCE_VALUES[x_name]
+            ax.set_xlim(min(x_limits[0], x_ref), max(x_limits[1], x_ref))
+            ax.axvline(x_ref, color="#222222", ls="--", lw=1.1, zorder=10)
+            if row != column:
+                y_limits = ax.get_ylim()
+                y_ref = REFERENCE_VALUES[y_name]
+                ax.set_ylim(min(y_limits[0], y_ref), max(y_limits[1], y_ref))
+                ax.axhline(y_ref, color="#222222", ls="--", lw=1.1, zorder=10)
+    references = ", ".join(
+        f"${PARAMETERS[key][1]} = {REFERENCE_VALUES[name]:g}$"
+        for name in params for key in PARAMETERS if PARAMETERS[key][0] == name)
+    plotter.fig.text(0.5, 0.005, "Dashed reference lines: " + references,
+                     ha="center", va="bottom", fontsize=8)
     plotter.export(str(destination))
 
 

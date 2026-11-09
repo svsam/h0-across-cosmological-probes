@@ -112,8 +112,14 @@ class CurvedCorner(PostProcessorElement):
                 axis.set_yticks([0, 0.5, 1.0])
             for axis in (top, joint):
                 axis.set_xlim(*H0_RANGE)
-            joint.set_ylim(*W_RANGE)
-            w_diagonal.set_xlim(*W_RANGE)
+            # The Lambda-CDM reference is outside these historical phantom-w
+            # priors; show it explicitly without changing the saved samples.
+            joint.set_ylim(W_RANGE[0], -0.98)
+            w_diagonal.set_xlim(W_RANGE[0], -0.98)
+            top.axvline(67.4, color="#222", ls="--", lw=1.1, zorder=10)
+            joint.axvline(67.4, color="#222", ls="--", lw=1.1, zorder=10)
+            joint.axhline(-1.0, color="#222", ls="--", lw=1.1, zorder=10)
+            w_diagonal.axvline(-1.0, color="#222", ls="--", lw=1.1, zorder=10)
             for axis in (top, joint, w_diagonal):
                 axis.tick_params(direction="in", top=True, right=True, labelsize=9)
                 axis.grid(alpha=0.10)
@@ -131,4 +137,7 @@ class CurvedCorner(PostProcessorElement):
         fig.text(0.065, 0.055,
                  "Diagonal: marginalized posterior  ·  Inner/outer shaded contours: 68%/95% credible regions  ·  BAO $H_0$ prior ≤ 95",
                  ha="left", va="bottom", fontsize=9, color="#444444")
+        fig.text(0.065, 0.02,
+                 "Dashed references: H₀ = 67.4 km/s/Mpc; w = −1 (outside the sampled phantom-w prior).",
+                 ha="left", va="bottom", fontsize=9, color="#222222")
         return fig

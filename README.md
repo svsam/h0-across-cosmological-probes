@@ -27,7 +27,57 @@ The saved chains were marginalized over the other sampled parameters to obtain a
 
 **These numbers are provisional diagnostics, not reported measurements.** None of the four chains passed the agreed autocorrelation convergence rule within the maximum of three checks per dataset. Their centers and widths could change with better exploration of parameter space, so this study does not yet quantify a statistically reliable \(H_0\) discrepancy.
 
-The [GetDist corner overlay](output/continuous/figures/continuous_corner.png) assigns a different colour to each independent probe and compares the four shared parameters. Full corner plots for [DES-Y3 BAO](output/continuous/figures/continuous_corner_des_y3_bao.png), [Pantheon+SH0ES](output/continuous/figures/continuous_corner_pantheonplussh0es.png), [DESI DR2 BAO](output/continuous/figures/continuous_corner_desi_dr2_bao.png), and [compressed Planck](output/continuous/figures/continuous_corner_planck_compressed.png) show every sampled parameter in each chain, including Pantheon's magnitude nuisance parameter and Planck's baryon density. The earlier [fixed-curvature corner plot](output/curved/native_postprocess/corner/h0_w_corner.png) compares \(H_0\) and \(w\) for those runs.
+## Corner plots for every continuous pipeline
+
+Black dashed lines mark the same reference cosmology on each diagonal and both axes of every joint panel. These are comparison benchmarks, not acceptance thresholds or additional likelihood constraints. The [Planck 2018 base-ΛCDM results](https://www.aanda.org/articles/aa/full_html/2020/09/aa33910-18/aa33910-18.html) motivate H₀ = 67.4 km s⁻¹ Mpc⁻¹ and Ωₘ = 0.315; Ωₖ = 0 and w = −1 specify flat ΛCDM. The Planck baryon reference Ω_b = 0.0493 matches the configured fiducial (rounded from Ω_b h² ≈ 0.0224 and h = 0.674). Pantheon's M = −19.35 is its configured nuisance-parameter fiducial, not a known universal constant. No uncertainty bands are implied by these single reference lines.
+
+### All four independent pipelines
+
+The overlay compares their four shared parameters; colours distinguish probes.
+
+![Continuous corner overlay for all four pipelines](output/continuous/figures/continuous_corner.png)
+
+### DES-Y3 BAO
+
+![DES-Y3 BAO continuous corner plot](output/continuous/figures/continuous_corner_des_y3_bao.png)
+
+### Pantheon+SH0ES
+
+Includes the sampled supernova magnitude nuisance parameter M.
+
+![Pantheon+SH0ES continuous corner plot](output/continuous/figures/continuous_corner_pantheonplussh0es.png)
+
+### DESI DR2 BAO
+
+![DESI DR2 BAO continuous corner plot](output/continuous/figures/continuous_corner_desi_dr2_bao.png)
+
+### Planck 2018 compressed
+
+Includes the sampled baryon density Ω_b. This pipeline uses compressed information rather than the full Planck likelihood.
+
+![Compressed Planck continuous corner plot](output/continuous/figures/continuous_corner_planck_compressed.png)
+
+### Earlier fixed-curvature pipelines
+
+Colours represent fixed Ωₖ choices. The w = −1 reference lies outside these historical runs' phantom-w prior [−1.5, −1.3]; the displayed axis is extended to show it.
+
+![Earlier fixed-curvature H0–w corner comparison](output/curved/native_postprocess/corner/h0_w_corner.png)
+
+### Reproduce the figures
+
+With NumPy, Matplotlib and GetDist installed, regenerate all five continuous corner figures from the saved chains:
+
+```sh
+python scripts/getdist_corner.py
+```
+
+To regenerate the earlier fixed-curvature comparison in a CosmoSIS environment:
+
+```sh
+sh scripts/create_native_figures.sh
+```
+
+Both commands reuse the saved chains, discard 30% burn-in and thin by ten. They do not rerun sampling or change the convergence status.
 
 ## What needs improvement
 
