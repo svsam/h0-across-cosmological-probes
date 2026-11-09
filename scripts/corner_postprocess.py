@@ -21,7 +21,11 @@ W_RANGE = (-1.5, -1.3)
 
 
 def credible_levels(density, h0, w, h0_grid, w_grid):
-    """Use sample counts to select the 68% and 95% KDE contour levels."""
+    """Return outer/inner KDE thresholds enclosing 95%/68% of the samples.
+
+    Histogram counts on the KDE grid supply the enclosed probability; the
+    density only determines which cells are visited first.
+    """
     h0_step = h0_grid[1] - h0_grid[0]
     w_step = w_grid[1] - w_grid[0]
     h0_edges = np.r_[h0_grid - h0_step / 2, h0_grid[-1] + h0_step / 2]
@@ -39,6 +43,7 @@ class CurvedCorner(PostProcessorElement):
     """One CosmoSIS plot product, filled by six independent chain inputs."""
 
     def run(self):
+        """Add one chain's marginals and joint contours to its dataset panel."""
         index = self.source.index
         if index >= 6:
             raise ValueError("Expected three fixed-curvature chains per dataset")
@@ -79,6 +84,7 @@ class CurvedCorner(PostProcessorElement):
 
     @staticmethod
     def _new_figure():
+        """Create paired H0-w corner panels and cache their axes for later chains."""
         fig = plt.figure(figsize=(14.2, 6.7), facecolor="white")
         layout = fig.add_gridspec(2, 5, left=0.065, right=0.965, bottom=0.13,
                                  top=0.78, hspace=0.04, wspace=0.07,

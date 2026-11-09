@@ -86,6 +86,7 @@ def validation_grid():
 
 
 def posterior_samples(header, chain):
+    """Extract finite H0 and w samples after burn-in for summaries and plots."""
     burn = int(0.3 * chain.shape[0])
     h0 = chain[burn:, :, header.index("cosmological_parameters--h0")].reshape(-1) * 100.0
     w = chain[burn:, :, header.index("cosmological_parameters--w")].reshape(-1)
@@ -96,6 +97,7 @@ def posterior_samples(header, chain):
 
 
 def summarize(samples):
+    """Keep the H0 statistics used to label the fixed-curvature figures."""
     summary = base.density_summary(samples, plot_points=500)
     return {
         "gaussian_peak_H0": summary["mean_and_gaussian_peak"],
@@ -152,7 +154,6 @@ def write_report(results, convergence):
               "values are in `physics_validation.json`.", "",
               "## Figures and data", "",
               "- `native_postprocess/corner/h0_w_corner.png`: H0–w corner comparison for both datasets; color distinguishes the three fixed Ωk runs. The contours use samples thinned by ten after burn-in.",
-              "- `native_postprocess/`: CosmoSIS-native H0 and w posterior PNG curves, with separate comparisons for each Ωk.",
               "- `curved_summary.json` and `curved_summary.csv`: machine-readable posterior summaries.",
               "- The six CosmoSIS text chains and convergence JSON files are retained alongside the figures.", "",
               "The DES-Y3 BAO sampled H0 posterior rises toward its upper prior bound, "

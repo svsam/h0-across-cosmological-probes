@@ -14,11 +14,6 @@ import sys
 import tempfile
 from pathlib import Path
 
-os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "cosmosis_h0_mplconfig"))
-Path(os.environ["MPLCONFIGDIR"]).mkdir(parents=True, exist_ok=True)
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import gaussian_kde, norm, skew
 
@@ -285,6 +280,7 @@ def run_fit(label: str, ini_name: str, output_name: str, sampled_params: tuple[s
 
 
 def posterior_samples(path: Path):
+    """Return finite post-burn H0 samples in km/s/Mpc from a saved chain."""
     header, chain = read_chain(path)
     burn = int(chain.shape[0] * 0.3)
     h0 = chain[burn:, :, header.index("cosmological_parameters--h0")].reshape(-1) * 100.0
@@ -292,6 +288,11 @@ def posterior_samples(path: Path):
 
 
 def density_summary(samples: np.ndarray, *, plot_points: int = 512):
+    """Summarize H0 samples and tabulate KDE/Gaussian curves for plotting.
+
+    The plot grid spans the central 99.6% of samples. The Gaussian uses the
+    sample mean and standard deviation as an approximation to the posterior.
+    """
     if len(samples) < 100:
         raise RuntimeError("Too few post-burn-in samples for a posterior summary")
     mu, sd = float(np.mean(samples)), float(np.std(samples, ddof=1))
@@ -307,38 +308,11 @@ def density_summary(samples: np.ndarray, *, plot_points: int = 512):
             "plot_x": x, "plot_kde": empirical, "plot_gaussian": gaussian}
 
 
-def make_figure(summaries: dict[str, dict], out_dir: Path):
-    colors = {"Pantheon+SH0ES": "#b33b3b", "DES-Y3 BAO": "#326a93"}
-    fig, ax = plt.subplots(figsize=(9.2, 5.4))
-    for label, summary in summaries.items():
-        color = colors[label]
-        x = summary["plot_x"]
-        ax.plot(x, summary["plot_gaussian"], color=color, lw=2.6,
-                label=f"{label}: Gaussian peak {summary['mean_and_gaussian_peak']:.2f} ± {summary['gaussian_sigma']:.2f}")
-        ax.plot(x, summary["plot_kde"], color=color, lw=1.5, ls=":", alpha=.85,
-                label=f"{label}: sampled posterior KDE")
-        peak = summary["mean_and_gaussian_peak"]
-        ax.axvline(peak, color=color, lw=1.6, ls="--")
-        label_y_offset = -20 if label == "Pantheon+SH0ES" else 8
-        ax.annotate(f"{peak:.2f}", (peak, norm.pdf(peak, peak, summary["gaussian_sigma"])),
-                    xytext=(4, label_y_offset), textcoords="offset points", color=color, fontsize=9)
-    ax.set(xlabel=r"$H_0$ [km s$^{-1}$ Mpc$^{-1}$]", ylabel="Posterior density",
-           title=(r"Flat $w$CDM: DES-Y3 BAO and Pantheon+SH0ES"
-                  "\n" + r"fixed $\Omega_m=0.30$, $\Omega_k=0$; sampled $w\in[-1,-1/3]$"))
-    ax.grid(alpha=.22)
-    ax.legend(frameon=False, fontsize=8)
-    fig.tight_layout()
-    figure_dir = HERE / "output" / "flat_wcdm"
-    figure_dir.mkdir(parents=True, exist_ok=True)
-    fig.savefig(figure_dir / "h0_gaussian_comparison.png", dpi=220)
-    plt.close(fig)
-
-
 def write_report(summaries: dict[str, dict], convergence: list[dict], out_dir: Path):
     lines = ["# DES-Y3 BAO and Pantheon+SH0ES: Hubble-constant comparison", "",
              "Both likelihoods are fit independently in flat constant-\\(w\\) CDM with \\Omega_m=0.3 fixed. The sampled parameters are \\(H_0\\) and \\(w\\); Pantheon+SH0ES also samples its absolute-magnitude nuisance parameter. DES-Y3 uses the standard early-Universe CAMB sound-horizon calculation with fixed input densities, so its absolute \\(H_0\\) posterior is conditional on that ruler calibration.", "",
              "Inputs are read from the shared standard-library DES-Y3 BAO chi-square profile and Pantheon+SH0ES data/covariance; no likelihood data are copied into this project. The CAMB calibration fixes \\(\\omega_b=0.048\\), \\(A_s=2.19\\times10^{-9}\\), \\(n_s=0.97\\), \\(N_{eff}=3.046\\), and the standard photon temperature.", "",
-             "The figure overlays Gaussian summaries of the marginalized posteriors. Each dashed marker is the Gaussian peak (the posterior sample mean); dotted curves show KDE estimates from the actual samples. The Gaussian is an approximation, assessed with skewness and KDE-to-Gaussian distance.", "",
+             "The Gaussian is an approximation to each marginalized posterior, assessed with skewness and KDE-to-Gaussian distance.", "",
              "## Main physical-prior results", "",
              "| Dataset | Gaussian peak H₀ | 68% posterior interval | Gaussian σ | Skewness | KDE/Gaussian L1 | Samples |", "|---|---:|---:|---:|---:|---:|---:|"]
     for name, summary in summaries.items():
@@ -358,7 +332,7 @@ def write_report(summaries: dict[str, dict], convergence: list[dict], out_dir: P
               "    D --> E",
               "    E --> F[Check integrated autocorrelation and ESS]",
               "    F --> G[Marginalize H0; summarize mean, sigma, and 68% interval]",
-              "    G --> H[Overlay Gaussian peaks and sampled-posterior KDEs]",
+              "    G --> H[Report separate posterior summaries]",
               "    G --> I[Repeat broad-w and +/-1% rd sensitivity fits]",
               "    H --> J[Report separate constraints and calibration dependence]",
               "    I --> J",
@@ -368,7 +342,7 @@ def write_report(summaries: dict[str, dict], convergence: list[dict], out_dir: P
         final = item["history"][-1]
         lines.append(f"- {item['dataset']}: converged with {final['steps_per_walker']:,} steps/walker; steps/\\(\\tau\\) = {', '.join(f'{x:.1f}' for x in final['steps_per_tau'])}; ESS = {', '.join(f'{x:.0f}' for x in final['effective_sample_size'])}.")
     lines += ["", "## Gaussian approximation and sensitivity", "",
-              "The DES-Y3 BAO posterior is much broader than Pantheon+SH0ES and its KDE/Gaussian L1 distance is comparatively large, so its Gaussian curve is a visual summary rather than a complete description. Use the separate 68% interval and dotted KDE when reading its uncertainty. Flat-model broad-\\(w\\) and ±1% \\(r_d\\) sensitivity results are in `../sensitivity/README.md`; the phantom-inclusive prior is phenomenological, and the ruler shifts quantify the BAO calibration dependence.", ""]
+              "The DES-Y3 BAO posterior is much broader than Pantheon+SH0ES and its KDE/Gaussian L1 distance is comparatively large, so its Gaussian summary is not a complete description. Use the separate 68% interval when reading its uncertainty. Flat-model broad-\\(w\\) and ±1% \\(r_d\\) sensitivity results are in `../sensitivity/README.md`; the phantom-inclusive prior is phenomenological, and the ruler shifts quantify the BAO calibration dependence.", ""]
     (out_dir / "README.md").write_text("\n".join(lines))
 
 
@@ -458,14 +432,13 @@ def main():
                                output_subdir=".run-data/flat_wcdm"))
         summaries[label] = density_summary(posterior_samples(HERE / ".run-data" / "flat_wcdm" / chain))
     out_dir = HERE / ".run-data" / "flat_wcdm"
-    make_figure(summaries, out_dir)
     write_report(summaries, results, out_dir)
     serializable = {name: {k: v for k, v in summary.items() if not k.startswith("plot_")}
                     for name, summary in summaries.items()}
     (out_dir / "posterior_summary.json").write_text(json.dumps(serializable, indent=2) + "\n")
     if args.sensitivity:
         run_sensitivity()
-    print(f"Wrote {out_dir / 'h0_gaussian_comparison.png'} and {out_dir / 'README.md'}")
+    print(f"Wrote {out_dir / 'README.md'}")
 
 
 if __name__ == "__main__":

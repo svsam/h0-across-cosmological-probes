@@ -100,6 +100,7 @@ def fit(label, setting):
 
 
 def summarize(label, chain_name, audit):
+    """Summarize one chain, including the H0 values shown on comparison plots."""
     header, chain = base.read_chain(OUT / chain_name)
     samples = chain[int(0.3 * len(chain)):].reshape(-1, len(header))
     get = lambda name: samples[:, header.index("cosmological_parameters--" + name)]
@@ -217,11 +218,8 @@ def write_report(results, audits):
                   "datasets are not multiplied into a joint estimate. This "
                   "two-chain study does not measure sensitivity to alternate "
                   "prior bounds or early-Universe calibration choices.", "",
-                  "- `figures/continuous_corner.png`: CosmoSIS "
-                  "postprocessor corner figure with sampled marginals and "
-                  "joint contours, plus dashed H0 Gaussian approximations.",
-                  "- `figures/continuous_h0.png`: enlarged H0 sampled "
-                  "posterior and Gaussian comparison with labelled peak lines.",
+                  "- `figures/continuous_corner.png`: GetDist corner overlay "
+                  "for the four shared sampled parameters.",
                   "- `summary.json` and `.csv`: numerical summaries.",
                   "- `physics_validation.json`: all 16 prior-corner checks for "
                   "density closure and positive E(z)² over 0 ≤ z ≤ 3.",

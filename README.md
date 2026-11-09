@@ -14,7 +14,7 @@ Each dataset has its own CosmoSIS pipeline. All four continuously sample \(H_0\)
 
 DES-Y3 contributes a transverse BAO distance at effective redshift 0.835. DESI DR2 contributes BAO distances across seven redshift bins. Both use CAMB's calculated sound horizon under stated early-Universe inputs, including fixed \(\Omega_b=0.048\); neither includes a BBN observational likelihood. Pantheon+SH0ES also samples the supernova magnitude nuisance parameter. The Planck comparison samples \(\Omega_b\) and uses a deliberately simplified likelihood for the acoustic scale and physical matter densities. It is **not** the full Planck power-spectrum analysis.
 
-The saved chains were marginalized over the other sampled parameters to obtain an \(H_0\) distribution for each dataset. A Gaussian was then fitted descriptively with its center at the chain mean and its width at one sample standard deviation. Histograms show the actual sampled shapes, including departures from a Gaussian. A vertical line marks each Gaussian center.
+The saved chains were marginalized over the other sampled parameters to obtain an \(H_0\) distribution for each dataset. A Gaussian was then fitted descriptively with its center at the chain mean and its width at one sample standard deviation. The corner plots show the sampled one-dimensional distributions on the diagonal and joint parameter contours below it.
 
 ## What the current runs show
 
@@ -27,9 +27,7 @@ The saved chains were marginalized over the other sampled parameters to obtain a
 
 **These numbers are provisional diagnostics, not reported measurements.** None of the four chains passed the agreed autocorrelation convergence rule within the maximum of three checks per dataset. Their centers and widths could change with better exploration of parameter space, so this study does not yet quantify a statistically reliable \(H_0\) discrepancy.
 
-![Separate Gaussian summaries of H0 from the four pipelines](output/continuous/figures/continuous_h0.png)
-
-The Gaussian figure uses a common \(H_0\) axis. The [four histograms on a 50–80 km s⁻¹ Mpc⁻¹ axis](output/continuous/figures/continuous_h0_histograms_50_80.png) show the sampled distributions on a shared scale; only 55% of DES-Y3's broad chain falls in that window. The [full-range histograms](output/continuous/figures/continuous_h0_histograms.png), [parameter histograms](output/continuous/figures/continuous_parameter_histograms.png), and [joint-parameter plot](output/continuous/figures/continuous_corner.png) show the wider distributions and relationships among \(H_0\), \(\Omega_m\), \(\Omega_k\), and \(w\). Earlier fixed-curvature results are preserved as [PNG figures](output/curved/native_postprocess/corner/h0_w_corner.png).
+The [GetDist corner overlay](output/continuous/figures/continuous_corner.png) assigns a different colour to each independent probe and compares the four shared parameters. Full corner plots for [DES-Y3 BAO](output/continuous/figures/continuous_corner_des_y3_bao.png), [Pantheon+SH0ES](output/continuous/figures/continuous_corner_pantheonplussh0es.png), [DESI DR2 BAO](output/continuous/figures/continuous_corner_desi_dr2_bao.png), and [compressed Planck](output/continuous/figures/continuous_corner_planck_compressed.png) show every sampled parameter in each chain, including Pantheon's magnitude nuisance parameter and Planck's baryon density. The earlier [fixed-curvature corner plot](output/curved/native_postprocess/corner/h0_w_corner.png) compares \(H_0\) and \(w\) for those runs.
 
 ## What needs improvement
 
