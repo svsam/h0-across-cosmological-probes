@@ -26,6 +26,11 @@ COLORS = ("#0876ac", "#e49c21", "#23a782", "#6a4ca2")
 
 
 def contour_levels(density, xs, ys, gx, gy):
+    """Return 95% and 68% KDE levels using sample counts on the KDE grid.
+
+    Ordering cells by density and accumulating their sample counts yields
+    contour thresholds for the empirical credible regions.
+    """
     dx, dy = gx[1] - gx[0], gy[1] - gy[0]
     counts, _, _ = np.histogram2d(xs, ys,
                                   bins=[np.r_[gx - dx / 2, gx[-1] + dx / 2],
@@ -39,7 +44,10 @@ def contour_levels(density, xs, ys, gx, gy):
 
 
 class ContinuousCorner(PostProcessorElement):
+    """Accumulate each independent chain into the comparison plot products."""
+
     def run(self):
+        """Draw one dataset's histograms, H0 summary, and corner contours."""
         index = self.source.index
         if index >= len(DATASETS):
             raise ValueError("Expected one chain for each dataset")
@@ -90,6 +98,7 @@ class ContinuousCorner(PostProcessorElement):
         shared_ax = shared_product.value.axes[index]
         shared_edges = np.linspace(50, 80, 61)
         bin_width = shared_edges[1] - shared_edges[0]
+        # Normalize against the full chain so the visible area shows its fraction in range.
         weights = np.full(len(vectors[0]), 1.0 / (len(vectors[0]) * bin_width))
         shared_ax.hist(vectors[0], bins=shared_edges, weights=weights,
                        color=color, edgecolor="white", linewidth=0.3, alpha=0.86)
@@ -157,6 +166,7 @@ class ContinuousCorner(PostProcessorElement):
                     84, [PARAMETERS[column][2], PARAMETERS[row][2]])
                 outer, inner = contour_levels(density, xs, ys, gx, gy)
                 upper = float(density.max()) * 1.001
+                # Nearly flat or coincident levels cannot define nested contours.
                 if 0 < outer < inner < upper:
                     ax.contourf(gx, gy, density.T, levels=[outer, upper], colors=[color], alpha=0.14)
                     ax.contourf(gx, gy, density.T, levels=[inner, upper], colors=[color], alpha=0.26)
@@ -170,6 +180,7 @@ class ContinuousCorner(PostProcessorElement):
 
     @staticmethod
     def new_histogram_figure(shared=False):
+        """Prepare four H0 histograms, optionally with a common 50-80 axis."""
         fig, axes = plt.subplots(2, 2, figsize=(12.2, 8.8), facecolor="white")
         fig.subplots_adjust(left=0.09, right=0.97, bottom=0.13, top=0.80,
                             hspace=0.34, wspace=0.23)
@@ -206,6 +217,7 @@ class ContinuousCorner(PostProcessorElement):
 
     @staticmethod
     def new_parameter_histogram_figure():
+        """Prepare dataset rows and shared-parameter columns for chain histograms."""
         fig, axes = plt.subplots(4, 4, figsize=(13.2, 11.4), facecolor="white")
         fig.subplots_adjust(left=0.16, right=0.97, bottom=0.10, top=0.84,
                             hspace=0.38, wspace=0.29)
@@ -236,6 +248,7 @@ class ContinuousCorner(PostProcessorElement):
 
     @staticmethod
     def new_h0_figure():
+        """Prepare the axis for overlaid Gaussian H0 summaries from each chain."""
         fig, ax = plt.subplots(figsize=(14.0, 6.4), facecolor="white")
         fig.subplots_adjust(left=0.08, right=0.60, bottom=0.24, top=0.78)
         ax.set_xlim(*PARAMETERS[0][2])
@@ -261,6 +274,7 @@ class ContinuousCorner(PostProcessorElement):
 
     @staticmethod
     def new_figure():
+        """Prepare the four-parameter corner grid and cache its axes for reuse."""
         fig, axes = plt.subplots(4, 4, figsize=(13.2, 12.0), facecolor="white")
         fig.subplots_adjust(left=0.10, right=0.94, bottom=0.10, top=0.81,
                             hspace=0.09, wspace=0.10)

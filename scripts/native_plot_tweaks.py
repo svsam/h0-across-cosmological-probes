@@ -26,9 +26,11 @@ COLORS = ("#bb3f4b", "#277da1", "#8661aa")
 
 
 class CurvedPosteriorPresentation(Tweaks):
+    """Restyle CosmoSIS marginal plots for a fixed-curvature run group."""
     filename = ["cosmological_parameters--h0", "cosmological_parameters--w"]
 
     def run(self):
+        """Label native posterior curves and add Gaussian H0 summaries when available."""
         group = os.environ["COSMOSIS_FIGURE_GROUP"]
         title, omega_k, labels = GROUPS[group]
         parameter = self.info[0]
